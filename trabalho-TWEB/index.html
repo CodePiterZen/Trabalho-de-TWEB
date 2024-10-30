@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+      <!-- Bootstrap CSS -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+  
+  
+  
+    
+    <title>Teste Corpo</title>
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Click Mart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobreNos">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#planos">My Trip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Check-in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Information</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="container1">
+
+    <div class="containerInterno" id="banner"></div>
+
+</div>
+<div id="container2">
+
+    <div class="containerInterno" id="a1">Anuncio 1</div>
+    <div class="containerInterno" id="a2">Anuncio 2</div>
+    <div class="containerInterno" id="a3">Anuncio 3</div>
+    <div class="containerInterno" id="inf">Informações</div>
+
+
+
+</div>
+<div id="container3">
+
+    <div class="seccaoArtigos" id="art1">artigo 1</div>
+    <div class="seccaoArtigos" id="art2">artigo 2</div>
+    <div class="seccaoArtigos" id="art3">artigo 3</div>
+    <div class="seccaoArtigos" id="art4">artigo 4</div>
+
+
+
+</div>
+
+
+
+
+  
+    <script>
+        AOS.init({
+            duration: 800, // Duration of the animation
+            once: true, // Only once animation
+        });
+        function toggleMenu() {
+            var element = document.querySelector('.hamburger');
+            element.classList.toggle('change');
+        }
+    </script>
+
+    
+
+
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.add("open");
+            } else {
+                navbar.classList.remove("open");
+            }
+            prevScrollPos = currentScrollPos;
+        }
+        
+        
+    </script>
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</body>
+
+</html>
